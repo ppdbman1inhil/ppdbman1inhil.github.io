@@ -1,0 +1,162 @@
+body {
+	margin: 0;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.slider {
+	width: 100%;
+}
+
+.slider input {
+	display: none;
+}
+
+.entrances {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 350px;
+	perspective: 1000px;
+	/* padding-top: ; */
+	overflow: hidden;
+}
+
+.entrances .item {
+	width: 450px;
+	transition: transform 0.8s;
+}
+
+/* .entrances .item img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 13px solid #3B344D;
+} */
+/* .entrances .item p {
+	color: #ddd;
+} */
+.entrances .item h2 {
+	font-size: 14px;
+}
+
+.dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dots label {
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #E3E8D6;
+	margin: 7px;
+	transition-duration: 0.2s;
+}
+
+/* show activated dot */
+#t-1:checked~.dots label[for="t-1"],
+#t-2:checked~.dots label[for="t-2"],
+#t-3:checked~.dots label[for="t-3"],
+#t-4:checked~.dots label[for="t-4"],
+#t-5:checked~.dots label[for="t-5"],
+#t-6:checked~.dots label[for="t-6"] {
+	transform: scale(2);
+	background-color: #287E1A;
+}
+
+/* scaled (perbesar) activated dot di kanan-kirinya */
+#t-1:checked~.dots label[for="t-2"],
+#t-2:checked~.dots label[for="t-1"],
+#t-2:checked~.dots label[for="t-3"],
+#t-3:checked~.dots label[for="t-2"],
+#t-3:checked~.dots label[for="t-4"],
+#t-4:checked~.dots label[for="t-3"],
+#t-4:checked~.dots label[for="t-5"],
+#t-5:checked~.dots label[for="t-4"],
+#t-5:checked~.dots label[for="t-6"],
+#t-6:checked~.dots label[for="t-5"] {
+	transform: scale(1.5);
+
+}
+
+/* #t-1:checked~.entrances label[for="t-3"],
+#t-2:checked~.entrances label[for="t-4"],
+#t-3:checked~.entrances label[for="t-5"],
+#t-4:checked~.entrances label[for="t-1"],
+#t-5:checked~.entrances label[for="t-2"],
+#t-6:checked~.entrances label[for="t-2"] {
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+} */
+
+
+
+/* #t-1:checked~.entrances label[for="t-3"],
+#t-2:checked~.entrances label[for="t-4"],
+#t-3:checked~.entrances label[for="t-5"],
+#t-4:checked~.entrances label[for="t-6"],
+#t-5:checked~.entrances label[for="t-1"],
+#t-6:checked~.entrances label[for="t-2"] {
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+} */
+
+
+
+/* PALING KIRI */
+#t-1:checked~.entrances label[for="t-5"],
+#t-2:checked~.entrances label[for="t-6"],
+#t-3:checked~.entrances label[for="t-1"],
+#t-4:checked~.entrances label[for="t-2"],
+#t-5:checked~.entrances label[for="t-3"],
+#t-6:checked~.entrances label[for="t-4"] {
+	transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+}
+
+/* DERET 2 DR KIRI */
+#t-1:checked~.entrances label[for="t-6"],
+#t-2:checked~.entrances label[for="t-1"],
+#t-3:checked~.entrances label[for="t-2"],
+#t-4:checked~.entrances label[for="t-3"],
+#t-5:checked~.entrances label[for="t-4"],
+#t-6:checked~.entrances label[for="t-5"] {
+	transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+	z-index: 3;
+}
+
+/* PALING TENGAH */
+#t-1:checked~.entrances label[for="t-1"],
+#t-2:checked~.entrances label[for="t-2"],
+#t-3:checked~.entrances label[for="t-3"],
+#t-4:checked~.entrances label[for="t-4"],
+#t-5:checked~.entrances label[for="t-5"],
+#t-6:checked~.entrances label[for="t-6"] {
+	z-index: 4;
+}
+
+/* DERET 2 DR KANAN */
+#t-1:checked~.entrances label[for="t-2"],
+#t-2:checked~.entrances label[for="t-3"],
+#t-3:checked~.entrances label[for="t-4"],
+#t-4:checked~.entrances label[for="t-5"],
+#t-5:checked~.entrances label[for="t-6"],
+#t-6:checked~.entrances label[for="t-1"] {
+	transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+	z-index: 3;
+}
+
+/* PALING KANAN */
+#t-1:checked~.entrances label[for="t-3"],
+#t-2:checked~.entrances label[for="t-4"],
+#t-3:checked~.entrances label[for="t-5"],
+#t-4:checked~.entrances label[for="t-6"],
+#t-5:checked~.entrances label[for="t-1"],
+#t-6:checked~.entrances label[for="t-2"] {
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 1;
+}
