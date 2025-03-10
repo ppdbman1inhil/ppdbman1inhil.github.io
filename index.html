@@ -156,55 +156,31 @@
                 <div class="">
                     <p class="text-center md:text-left text-1xl lg:text-2xl 2xl:text-4xl font-semibold">PPDB MAN 1 INHIL
                     </p>
-                    <!-- TAMPILKAN PESAN SESUAI WAKTU JADWAL PPDB -->
-                    <?php
-                    $date = time();
-
-                    $registrationStart = strtotime('2024-05-02 00:00:00');
-                    $registrationClosed = strtotime('2024-05-31 23:59:59');
-
-                    if ($date < $registrationStart && $date < $registrationClosed) {
-                        //HITUNG SISA WAKTU REGISTRASI DIBUKA
-                        $timefromdb = $date;
-                        $timeleft = $registrationStart - $timefromdb;
-                        $daysleft = round((($timeleft / 24) / 60) / 60);
-                    ?>
+                    
                     <p class="text-center md:text-left text-3xl lg:text-4xl 2xl:text-6xl font-bold">SEGERA DIBUKA!</p>
                     <p class="text-center md:text-left text-sm 2xl:text-base">Ayo segera persiapkan berkas persyaratan
                         Anda.</p>
                     <p class="text-center md:text-left text-xl lg:text-2xl font-semibold">Sisa waktu pendaftaran dibuka
                     </p>
                     <p class="text-center mt-4 md:text-left text-8xl lg:text-9xl font-bold text-secondary-darker">
-                        <?php echo $daysleft; ?><span
-                            class="text-xl md:text-2xl font-semibold text-text-primary">Hari</span>
+                      30<span class="text-xl md:text-2xl font-semibold text-text-primary">Hari</span>
                     </p>
 
-                    <?php
-                    } else if ($date >= $registrationStart && $date < $registrationClosed) { // rentang jadwal penerimaan
-                        //HITUNG SISA WAKTU DAFTAR
-                        $timefromdb = $date; //source time
-                        $timeleft = $registrationClosed - $timefromdb;
-                        $daysleft = round((($timeleft / 24) / 60) / 60);
-                    ?>
-                    <p class="text-center md:text-left text-3xl lg:text-4xl 2xl:text-6xl font-bold">TELAH DIBUKA!</p>
+                
+                    <!-- <p class="text-center md:text-left text-3xl lg:text-4xl 2xl:text-6xl font-bold">TELAH DIBUKA!</p>
                     <p class="text-center md:text-left text-sm 2xl:text-base">Ayo segera daftarkan diri Anda segera.</p>
 
                     <p class="text-center md:text-left text-xl lg:text-2xl font-semibold">Sisa waktu pendaftaran ditutup
                     </p>
                     <p class="text-center mt-4 md:text-left text-8xl lg:text-9xl font-bold text-secondary-darker">
-                        <?php echo $daysleft; ?><span
+                        <span
                             class="text-xl md:text-2xl font-semibold text-text-primary">Hari</span>
                     </p>
-                    <?php
-                    } else if ($date > $registrationClosed) { // di atas jadwal alias TUTUP
-                    ?>
                     <p class="text-center md:text-left text-3xl lg:text-4xl 2xl:text-6xl font-bold">TELAH DITUTUP!</p>
                     <p class="text-center md:text-left text-sm 2xl:text-base">Terima kasih atas partisipasi Anda yang
                         telah mendaftar. Silahkan menyerahkan berkas secara langsung di MAN 01 INHIL untuk dilakukan
-                        verifikasi berkas.</p>
-                    <?php
-                    } ?>
-
+                        verifikasi berkas.</p> -->
+                    
 
                 </div>
 
